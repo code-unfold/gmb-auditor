@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-navy: #0a2540;
+  --brand-blue: #2470ce;
+  --brand-green: #0f9960;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-brand-900 antialiased;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+::selection {
+  background: rgba(36, 112, 206, 0.18);
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-all duration-150;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-500 text-white shadow-card hover:bg-brand-600 hover:shadow-lift active:translate-y-px;
+  }
+
+  .btn-secondary {
+    @apply btn border border-brand-200 bg-white text-brand-700 hover:border-brand-300 hover:bg-brand-50;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-500 text-white shadow-card hover:bg-accent-600 hover:shadow-lift active:translate-y-px;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-brand-900 sm:text-4xl;
+  }
+
+  .section-kicker {
+    @apply mb-3 inline-block rounded-full bg-brand-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-600;
+  }
+}
