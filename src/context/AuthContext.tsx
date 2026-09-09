@@ -1,7 +1,20 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
-import { UserProfile } from '@/types';
+
+export interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  avatarUrl?: string;
+  plan?: 'Free Trial' | 'Agency Pro' | 'Enterprise' | string;
+  creditsRemaining?: number;
+  savedAuditsCount?: number;
+  company?: string;
+  role?: string;
+  savedAudits?: string[];
+  createdAt?: string;
+}
 
 export interface AuthContextType {
   user: UserProfile | null;
@@ -44,6 +57,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let isMounted = true;
+
     try {
       if (typeof window !== 'undefined') {
         const cached = localStorage.getItem(STORAGE_KEY);
@@ -81,7 +95,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           try { localStorage.removeItem(STORAGE_KEY); } catch {}
         }
       } catch (err) {
-        console.warn('Session verification offline or skipped:', err);
+        console.warn('Session verification skipped or offline:', err);
       } finally {
         if (isMounted) {
           setIsLoading(false);
