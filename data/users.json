@@ -1,0 +1,35 @@
+[
+  {
+    "id": "usr_demo_001",
+    "name": "Demo User",
+    "email": "demo@gbpauditor.com",
+    "passwordHash": "96b34be4d5df4283d848deb52b9210e4:b3ccdb7a240c03f6b5adf8b10db4dd1922c58d54d679c5674c2031e464963258253fd59d8019b24262330e1e87875706607c7d4927801064fe7a8b27e0fe0484",
+    "company": "GBP Growth Partners",
+    "role": "user",
+    "createdAt": "2026-09-09T10:56:57.799Z",
+    "savedAudits": [
+      "audit_demo_austin_plumbing_2026",
+      "audit_demo_downtown_dental_2026"
+    ]
+  },
+  {
+    "id": "usr_cc83b8fc-a89a-40f3-bed0-3fb0c7c832d3",
+    "name": "Jane Auditor",
+    "email": "jane@agencypro.com",
+    "passwordHash": "e1238d88446989f102962acdf639a12b:3c0e20f3449adcce5a114318a3537593bd4f8346afe3ac6e8c3e46149f35de6b868fed0ff867dea1d65524b44903dc190072afbce4611789accf8d5d9fe44ffc",
+    "company": "Agency Pro LLC",
+    "role": "user",
+    "createdAt": "2026-09-09T10:56:58.125Z",
+    "savedAudits": []
+  },
+  {
+    "id": "usr_09521eba-d9e8-47b8-9d2d-d508df65b311",
+    "name": "Bob Builder",
+    "email": "bob@localbuilders.com",
+    "passwordHash": "ccb4b865d570bad6e5fa2e9be216016f:ec901dcd42cac64f774f456c8cacef59eb737999d0ab50b75800483ba629c115cf364e2ddedd8790d8044798a0cc3ae79ff6330fa7d0161be9b043339397d24b",
+    "company": "Builder Marketing",
+    "role": "user",
+    "createdAt": "2026-09-09T10:57:05.408Z",
+    "savedAudits": []
+  }
+]
